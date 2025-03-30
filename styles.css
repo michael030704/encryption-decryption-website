@@ -1,0 +1,168 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+h1, h3 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: 500;
+}
+
+textarea, input {
+    width: 100%;
+    margin-top: 5px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+textarea:focus, input:focus {
+    border-color: #007BFF;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #6DD5FA, #2980B9);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #3498DB, #2980B9);
+    transform: translateY(-3px);
+}
+
+#result {
+    margin-top: 20px;
+    background-color: #f0f4f8;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    resize: none;
+}
+
+.tabs {
+    margin-top: 40px;
+}
+
+.tablinks {
+    background-color: #e7e9eb;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0 10px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.tablinks.active, .tablinks:hover {
+    background-color: #3498DB;
+    color: white;
+}
+
+/* Style for tab contents */
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+    position: relative;
+    animation: fadeIn 0.5s ease-in-out; /* Add animation */
+}
+
+/* Animation for opening */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px); /* Slide up */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for closing */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px); /* Slide up */
+    }
+}
+
+/* Style for close button (X button) */
+.close-btn {
+    background: none;
+    color: black;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+/* Hide tabs when closed */
+.hide {
+    display: none !important;
+}

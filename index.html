@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption and Decryption</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Encryption and Decryption Methods</h1>
+
+        <label for="message">Enter a message:</label>
+        <textarea id="message" rows="4" placeholder="Enter your message here..."></textarea>
+        <small id="message-error" class="error-message"></small>
+
+        <label for="shift">Enter a shift value (1-25):</label>
+        <input type="number" id="shift" min="1" max="25" value="1">
+        <small id="shift-error" class="error-message"></small>
+
+        <div class="buttons">
+            <button onclick="validateAndEncrypt()">Encrypt</button>
+            <button onclick="validateAndDecrypt()">Decrypt</button>
+        </div>
+
+        <h3>Result:</h3>
+        <textarea id="result" rows="4" readonly></textarea>
+
+        <div class="tabs">
+            <button class="tablinks" onclick="openTab(event, 'Videos')">Videos</button>
+            <button class="tablinks" onclick="openTab(event, 'Discussion')">Discussion</button>
+        </div>
+
+        <div id="Videos" class="tabcontent">
+            <button class="close-btn" onclick="closeTab('Videos')">X</button>
+            <h2>Videos on Encryption and Decryption in Cybersecurity</h2>
+            <p>Below are useful videos explaining encryption and decryption:</p>
+            
+            <!-- Embed the first YouTube video -->
+            <iframe width="100%" height="315" 
+                src="https://www.youtube.com/embed/9u6sovgxiH4" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        
+            <br><br> <!-- Spacing between videos -->
+        
+            <!-- Embed the second YouTube video -->
+            <iframe width="100%" height="315" 
+                src="https://www.youtube.com/embed/J1RmZZEkN0k" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        
+            <br><br> <!-- Spacing between videos -->
+        
+            <!-- Embed the third YouTube video -->
+            <iframe width="100%" height="315" 
+                src="https://www.youtube.com/embed/4KiwoeDJFiA" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        
+
+        <div id="Discussion" class="tabcontent">
+            <button class="close-btn" onclick="closeTab('Discussion')">X</button>
+            <h2>Discussion Board</h2>
+        
+            <h3>1. Why is encryption important?</h3>
+            <p>
+                Encryption is crucial for protecting sensitive information in the digital world. It ensures data confidentiality by converting readable information (plaintext) into unreadable code (ciphertext) that can only be decrypted with a specific key. This prevents unauthorized access, protects privacy, and ensures secure communication, especially in areas like online banking, healthcare, and personal communications. Without encryption, sensitive data would be vulnerable to interception, theft, or manipulation by malicious actors.
+            </p>
+        
+            <h3>2. Can encryption be misused?</h3>
+            <p>
+                Yes, encryption can be misused in certain cases. While its primary purpose is to protect data, malicious individuals or organizations can use encryption to hide illegal activities, making it difficult for law enforcement to access critical information. For example, criminals may encrypt communications or data to avoid detection, or ransomware attacks may encrypt victims' data, locking them out until a ransom is paid. Additionally, poor implementation or weak encryption algorithms can lead to vulnerabilities, making the system easier to crack.
+            </p>
+        
+            <h3>3. What are some real-life concerns about encryption?</h3>
+            <p>
+                Some real-life concerns about encryption revolve around privacy and security. On one hand, there is the need to protect individuals' privacy and secure sensitive data. On the other hand, governments and law enforcement agencies sometimes call for "backdoors" in encryption systems to fight crime and terrorism, which raises privacy concerns. Such backdoors could be exploited by hackers if not properly controlled. Additionally, there are concerns about outdated encryption algorithms, which, if not upgraded, can leave systems vulnerable to attacks. The balance between security and accessibility remains a significant challenge in the encryption debate.
+            </p>
+        </div>
+</div>        
+    <script src="script.js"></script>
+</body>
+</html>
